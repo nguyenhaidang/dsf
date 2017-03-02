@@ -1,0 +1,17 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, "8.0"
+inhibit_all_warnings!
+use_frameworks!
+
+def framework_pods
+    pod 'SwiftyJSON', '~> 3.1.4'
+    pod 'Alamofire', '~> 4.2.0'
+    pod 'RealmSwift', '~> 2.2.0'
+    pod 'ReachabilitySwift', '~> 3'
+    pod 'XCGLogger', '~> 4.0.0'
+    pod 'KeychainAccess', '~> 3.0.1'
+end
+
+target :testBuildFramework do
+    framework_pods
+end
